@@ -1,4 +1,4 @@
-# FMSAdminAPI
+# FMSAdminAPI Postman Collection
  API calls to manage your FileMaker Server installation
 
  **Requires FMS 19** 
