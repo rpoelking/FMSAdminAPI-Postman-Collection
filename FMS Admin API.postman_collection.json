@@ -3372,6 +3372,120 @@
 					"response": []
 				},
 				{
+					"name": "Get Custom OAuth Identity Provider Information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/extauth/provider/customoauth",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"extauth",
+								"provider",
+								"customoauth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Custom OAuth Identity Provider Information",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"OIDCEnabled\": 0,\n\"CustomIdPName\": \"Custom IdP Name\",\n\"ClientID\": \"Client ID\",\n\"ClientSecret\": \"Client Secret\",\n\"AuthorizationCodeEndpoint\": \"Authorization Code Endpoint\",\n\"AdditionalQueryParameters\": \"Additional Query Parameters\",\n\"AuthorizationTokenEndpoint\": \"Authorization Token Endpoint\",\n\"AuthorizationProfileEndpoint\": \"Authorization Profile Endpoint\",\n\"CustomIdPIconEndpoint\": \"Custom IdP Icon Endpoint\",\n\"CustomIdPUserAccountSchema\": \"Custom IdP User Account Schema\",\n\"CustomIdPUserGroupSchema\": \"Custom IdP User Group Schema\",\n\"Scope\": \"Scope\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/extauth/provider/customoauth",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"extauth",
+								"provider",
+								"customoauth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get AppleID Identity Provider Information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/extauth/provider/appleid",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"extauth",
+								"provider",
+								"appleid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update AppleID Identity Provider Information",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"ServiceID\": \"Provider Service ID\",\n\"ClientSecret\": \"Provider Client Secret\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/extauth/provider/appleid",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"extauth",
+								"provider",
+								"appleid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Enable/Disable Admin Console Sign-In",
 					"request": {
 						"method": "PATCH",
@@ -3399,6 +3513,43 @@
 								"{{version}}",
 								"extauth",
 								"adminconsolesignin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Database Sign-In Settings for External Server Accounts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"useExternalGroup\": true\n}"
+						},
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/extauth/dbsignin/externalserver",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"extauth",
+								"dbsignin",
+								"externalserver"
 							]
 						}
 					},
@@ -3439,7 +3590,44 @@
 					"response": []
 				},
 				{
-					"name": "Database Sign-In for Amazon",
+					"name": "Get Database Sign-In for Amazon",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/extauth/dbsignin/amazon",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"extauth",
+								"dbsignin",
+								"amazon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Database Sign-In for Amazon",
 					"request": {
 						"method": "PATCH",
 						"header": [
@@ -3473,7 +3661,44 @@
 					"response": []
 				},
 				{
-					"name": "Database Sign-In for Google",
+					"name": "Get Database Sign-In for Google",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/extauth/dbsignin/google",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"extauth",
+								"dbsignin",
+								"google"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Database Sign-In for Google",
 					"request": {
 						"method": "PATCH",
 						"header": [
@@ -3507,7 +3732,44 @@
 					"response": []
 				},
 				{
-					"name": "Database Sign-In for Microsoft",
+					"name": "Get Database Sign-In for Microsoft",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/extauth/dbsignin/microsoft",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"extauth",
+								"dbsignin",
+								"microsoft"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Database Sign-In for Microsoft",
 					"request": {
 						"method": "PATCH",
 						"header": [
@@ -3535,6 +3797,148 @@
 								"extauth",
 								"dbsignin",
 								"microsoft"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Database Sign-In for AppleID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/extauth/dbsignin/appleid",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"extauth",
+								"dbsignin",
+								"appleid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Database Sign-In for AppleID",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"EnableAppleIDSignin\": true\n}"
+						},
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/extauth/dbsignin/appleid",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"extauth",
+								"dbsignin",
+								"appleid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Database Sign-In Settings for Custom OAuth",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/extauth/dbsignin/customauth",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"extauth",
+								"dbsignin",
+								"customauth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Database Sign-In Settings for Custom OAuth",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"EnableCustomOAuthSignin\": true\n}"
+						},
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/extauth/dbsignin/customauth",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"extauth",
+								"dbsignin",
+								"customauth"
 							]
 						}
 					},
@@ -3662,7 +4066,43 @@
 					"response": []
 				},
 				{
-					"name": "Filter List of Databases",
+					"name": "Get Database Filtering Setting",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/fmclients/databasevisibility",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"fmclients",
+								"databasevisibility"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Database Filtering Setting",
 					"request": {
 						"method": "PATCH",
 						"header": [
@@ -3773,7 +4213,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"subject\": \"L0NOPXd3dy5teWRvbS5jb20vTz1NeSBEb20sIEluYy4vQz1VUy9TVD1PcmVnb24vTD1Qb3J0bGFuZA==\",\n  \"password\": \"FileMaker123\"\n}"
+							"raw": "{\n\"subject\": \"L0NOPXd3dy5teWRvbS5jb20vTz1NeSBEb20sIEluYy4vQz1VUy9TVD1PcmVnb24vTD1Qb3J0bGFuZA==\",\n\"password\": \"FileMaker123\"\n}"
 						},
 						"url": {
 							"raw": "https://{{server}}/fmi/admin/api/{{version}}/server/certificate/csr",
@@ -3831,7 +4271,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"certificate\": \"-----BEGIN CERTIFICATE-----\\nMIIFNDCCBBygAwIBAgISBBryFgTqwZ1rLXKHATBa2oUYMA0GCSqGSIb3DQEBCwUA\\nMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD\\nEwJSMzAeFw0yMTA5MTYyMDIwNDVaFw0yMTEyMTUyMDIwNDRaMCIxIDAeBgNVBAMT\\nF2ZtczQucnBiaXpzb2x1dGlvbnMuYml6MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A\\nMIIBCgKCAQEAzmTgzicuMYkOCUuLKdinXMKoJ2zbeFhn96ttP080771TIO9gl76u\\nU/TwiIPriBI0gXDLdCc0BeaAssahlOyxFc9BXWoqYYdmb/8AhynjJ883JU0P+Q2E\\nZSoK5y9BzaMjgnEMlDxM3Dz70/8RkJVFg6a1rx/DmJjY9VYAGG80OtyOl/oqBpyy\\nCLGDZBcKzePcfw3VehYHZ0qrlaxfFCAhUDc0SrGDDWl2V79gFKFFUAAKUrT/l047\\nBHufEVlFbwMupp3AXKShe85cmg4mb9zS5lpc5J1Brk2ggwoceAsAjoLU6yx8q1wz\\nFagZ3vvoOAvaCeZWYsiHQM0HBTyyRqfQmQIDAQABo4ICUjCCAk4wDgYDVR0PAQH/\\nBAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E\\nAjAAMB0GA1UdDgQWBBR3VWh+3fogkmR7Oyy7BrVweUtufTAfBgNVHSMEGDAWgBQU\\nLrMXt1hWy65QCUDmH6+dixTCxjBVBggrBgEFBQcBAQRJMEcwIQYIKwYBBQUHMAGG\\nFWh0dHA6Ly9yMy5vLmxlbmNyLm9yZzAiBggrBgEFBQcwAoYWaHR0cDovL3IzLmku\\nbGVuY3Iub3JnLzAiBgNVHREEGzAZghdmbXM0LnJwYml6c29sdXRpb25zLmJpejBM\\nBgNVHSAERTBDMAgGBmeBDAECATA3BgsrBgEEAYLfEwEBATAoMCYGCCsGAQUFBwIB\\nFhpodHRwOi8vY3BzLmxldHNlbmNyeXB0Lm9yZzCCAQQGCisGAQQB1nkCBAIEgfUE\\ngfIA8AB2AFzcQ5L+5qtFRLFemtRW5hA3+9X6R9yhc5SyXub2xw7KAAABe/B7uoEA\\nAAQDAEcwRQIgPQWzc/pbfwKK2IiunPeXSd6wfXMg0eYvL3AyfP71EvMCIQD88k/z\\nXTpHXBu05nZRTnj0TWGh0Ml6CLCe51dY+IVwOwB2APZclC/RdzAiFFQYCDCUVo7j\\nTRMZM7/fDC8gC8xO8WTjAAABe/B7umcAAAQDAEcwRQIgeAzikMFdW2Rbe8VQ1S/g\\n9xfBF1CiDM2hQonKM+xXNcwCIQCpq5S/C0eIaebFf0qI/xAWyWeXrROHZJhrrwkJ\\nRIoOWDANBgkqhkiG9w0BAQsFAAOCAQEAbaiH8lvHIJ9ziF4ORqVPs02SDMdYZjfp\\nqaHDtPdkzHV4NhRd26ovuDAV/iP0b5AuEd9Q04+IAiosjVjm9iGRybOeKInfmFgm\\n/2+h3lCzjXhXtgdyn1ToQXT85wwxXDfj3BJ6cPk2/tQOGqQbS0BC8S/i15Xq6p3U\\nlxo9SV7SBzwjZpUKrGRAbWU+4fksUjxq1dOJNJfRO4NhuO7mc031oVpCYfEupHpU\\npumAOnml6HMyirJLWw5u08guXidhFASRTmcYpEmbPryBuPdTQ13bhi85E1VUnPAU\\n/gAYWXadBQ9hwKQcs9z+A1u09BUEOdTxw+aE9MXqKG4n62Y3GeqZEw==\\n-----END CERTIFICATE-----\\n-----BEGIN CERTIFICATE-----\\nMIIFFjCCAv6gAwIBAgIRAJErCErPDBinU/bWLiWnX1owDQYJKoZIhvcNAQELBQAw\\nTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh\\ncmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjAwOTA0MDAwMDAw\\nWhcNMjUwOTE1MTYwMDAwWjAyMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3Mg\\nRW5jcnlwdDELMAkGA1UEAxMCUjMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK\\nAoIBAQC7AhUozPaglNMPEuyNVZLD+ILxmaZ6QoinXSaqtSu5xUyxr45r+XXIo9cP\\nR5QUVTVXjJ6oojkZ9YI8QqlObvU7wy7bjcCwXPNZOOftz2nwWgsbvsCUJCWH+jdx\\nsxPnHKzhm+/b5DtFUkWWqcFTzjTIUu61ru2P3mBw4qVUq7ZtDpelQDRrK9O8Zutm\\nNHz6a4uPVymZ+DAXXbpyb/uBxa3Shlg9F8fnCbvxK/eG3MHacV3URuPMrSXBiLxg\\nZ3Vms/EY96Jc5lP/Ooi2R6X/ExjqmAl3P51T+c8B5fWmcBcUr2Ok/5mzk53cU6cG\\n/kiFHaFpriV1uxPMUgP17VGhi9sVAgMBAAGjggEIMIIBBDAOBgNVHQ8BAf8EBAMC\\nAYYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMBIGA1UdEwEB/wQIMAYB\\nAf8CAQAwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYfr52LFMLGMB8GA1UdIwQYMBaA\\nFHm0WeZ7tuXkAXOACIjIGlj26ZtuMDIGCCsGAQUFBwEBBCYwJDAiBggrBgEFBQcw\\nAoYWaHR0cDovL3gxLmkubGVuY3Iub3JnLzAnBgNVHR8EIDAeMBygGqAYhhZodHRw\\nOi8veDEuYy5sZW5jci5vcmcvMCIGA1UdIAQbMBkwCAYGZ4EMAQIBMA0GCysGAQQB\\ngt8TAQEBMA0GCSqGSIb3DQEBCwUAA4ICAQCFyk5HPqP3hUSFvNVneLKYY611TR6W\\nPTNlclQtgaDqw+34IL9fzLdwALduO/ZelN7kIJ+m74uyA+eitRY8kc607TkC53wl\\nikfmZW4/RvTZ8M6UK+5UzhK8jCdLuMGYL6KvzXGRSgi3yLgjewQtCPkIVz6D2QQz\\nCkcheAmCJ8MqyJu5zlzyZMjAvnnAT45tRAxekrsu94sQ4egdRCnbWSDtY7kh+BIm\\nlJNXoB1lBMEKIq4QDUOXoRgffuDghje1WrG9ML+Hbisq/yFOGwXD9RiX8F6sw6W4\\navAuvDszue5L3sz85K+EC4Y/wFVDNvZo4TYXao6Z0f+lQKc0t8DQYzk1OXVu8rp2\\nyJMC6alLbBfODALZvYH7n7do1AZls4I9d1P4jnkDrQoxB3UqQ9hVl3LEKQ73xF1O\\nyK5GhDDX8oVfGKF5u+decIsH4YaTw7mP3GFxJSqv3+0lUFJoi5Lc5da149p90Ids\\nhCExroL1+7mryIkXPeFM5TgO9r0rvZaBFOvV2z0gp35Z0+L4WPlbuEjN/lxPFin+\\nHlUjr8gRsI3qfJOQFy/9rKIJR0Y/8Omwt/8oTWgy1mdeHmmjk7j1nYsvC9JSQ6Zv\\nMldlTTKB3zhThV1+XWYp6rjd5JW1zbVWEkLNxE7GJThEUG3szgBVGP7pSWTUTsqX\\nnLRbwHOoq7hHwg==\\n-----END CERTIFICATE-----\\n-----BEGIN CERTIFICATE-----\\nMIIFYDCCBEigAwIBAgIQQAF3ITfU6UK47naqPGQKtzANBgkqhkiG9w0BAQsFADA/\\nMSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT\\nDkRTVCBSb290IENBIFgzMB4XDTIxMDEyMDE5MTQwM1oXDTI0MDkzMDE4MTQwM1ow\\nTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh\\ncmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwggIiMA0GCSqGSIb3DQEB\\nAQUAA4ICDwAwggIKAoICAQCt6CRz9BQ385ueK1coHIe+3LffOJCMbjzmV6B493XC\\nov71am72AE8o295ohmxEk7axY/0UEmu/H9LqMZshftEzPLpI9d1537O4/xLxIZpL\\nwYqGcWlKZmZsj348cL+tKSIG8+TA5oCu4kuPt5l+lAOf00eXfJlII1PoOK5PCm+D\\nLtFJV4yAdLbaL9A4jXsDcCEbdfIwPPqPrt3aY6vrFk/CjhFLfs8L6P+1dy70sntK\\n4EwSJQxwjQMpoOFTJOwT2e4ZvxCzSow/iaNhUd6shweU9GNx7C7ib1uYgeGJXDR5\\nbHbvO5BieebbpJovJsXQEOEO3tkQjhb7t/eo98flAgeYjzYIlefiN5YNNnWe+w5y\\nsR2bvAP5SQXYgd0FtCrWQemsAXaVCg/Y39W9Eh81LygXbNKYwagJZHduRze6zqxZ\\nXmidf3LWicUGQSk+WT7dJvUkyRGnWqNMQB9GoZm1pzpRboY7nn1ypxIFeFntPlF4\\nFQsDj43QLwWyPntKHEtzBRL8xurgUBN8Q5N0s8p0544fAQjQMNRbcTa0B7rBMDBc\\nSLeCO5imfWCKoqMpgsy6vYMEG6KDA0Gh1gXxG8K28Kh8hjtGqEgqiNx2mna/H2ql\\nPRmP6zjzZN7IKw0KKP/32+IVQtQi0Cdd4Xn+GOdwiK1O5tmLOsbdJ1Fu/7xk9TND\\nTwIDAQABo4IBRjCCAUIwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYw\\nSwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzAChi9odHRwOi8vYXBwcy5pZGVudHJ1\\nc3QuY29tL3Jvb3RzL2RzdHJvb3RjYXgzLnA3YzAfBgNVHSMEGDAWgBTEp7Gkeyxx\\n+tvhS5B1/8QVYIWJEDBUBgNVHSAETTBLMAgGBmeBDAECATA/BgsrBgEEAYLfEwEB\\nATAwMC4GCCsGAQUFBwIBFiJodHRwOi8vY3BzLnJvb3QteDEubGV0c2VuY3J5cHQu\\nb3JnMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaWRlbnRydXN0LmNvbS9E\\nU1RST09UQ0FYM0NSTC5jcmwwHQYDVR0OBBYEFHm0WeZ7tuXkAXOACIjIGlj26Ztu\\nMA0GCSqGSIb3DQEBCwUAA4IBAQAKcwBslm7/DlLQrt2M51oGrS+o44+/yQoDFVDC\\n5WxCu2+b9LRPwkSICHXM6webFGJueN7sJ7o5XPWioW5WlHAQU7G75K/QosMrAdSW\\n9MUgNTP52GE24HGNtLi1qoJFlcDyqSMo59ahy2cI2qBDLKobkx/J3vWraV0T9VuG\\nWCLKTVXkcGdtwlfFRjlBz4pYg1htmf5X6DYO8A4jqv2Il9DjXA6USbW1FzXSLr9O\\nhe8Y4IWS6wY7bCkjCWDcRQJMEhg76fsO3txE+FiYruq9RUWhiF1myv4Q6W+CyBFC\\nDfvp7OOGAN6dEOM4+qR9sdjoSYKEBpsr6GtPAQw4dy753ec5\\n-----END CERTIFICATE-----\\n\",\n    \"privateKey\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDOZODOJy4xiQ4J\\nS4sp2KdcwqgnbNt4WGf3q20/TzTvvVMg72CXvq5T9PCIg+uIEjSBcMt0JzQF5oCy\\nxqGU7LEVz0Fdaiphh2Zv/wCHKeMnzzclTQ/5DYRlKgrnL0HNoyOCcQyUPEzcPPvT\\n/xGQlUWDprWvH8OYmNj1VgAYbzQ63I6X+ioGnLIIsYNkFwrN49x/DdV6FgdnSquV\\nrF8UICFQNzRKsYMNaXZXv2AUoUVQAApStP+XTjsEe58RWUVvAy6mncBcpKF7zlya\\nDiZv3NLmWlzknUGuTaCDChx4CwCOgtTrLHyrXDMVqBne++g4C9oJ5lZiyIdAzQcF\\nPLJGp9CZAgMBAAECggEBAL6tD8slA1YcKm2H7x9P2v6ljzgtJ209L3/uTdWJVXyO\\nyjfJLtHCBcfmqDlWtshVGVDkZfH/Ld6tnwSK4Uh2ivt9KAQnStQjhQ2+5jv5BLUI\\niQfa9ADA7imP99axH/fc2bduvZJNSyzE4lpucUnDvh7sazlI/SkDPJ0bQKdSRUyC\\nQjI0hwiCcD8yeYisVxjeVbpS2AVojA3QFEYj4pbpAJRTramIe1YarSyNvbQPVEv6\\nnMwKJoImhqNsU7s+ziE4n4PbhmUyHEcwOxbF6qok1uhDf4ClOV9YeA2KAJN0151Z\\npcAxaD0wmtx2V53Z5ri6W/HG1BX9u8CD6J0S2fg6WkkCgYEA6I6x8kGZr6VVkiFV\\nvw9H6ZtzeqOhcUitCoTpMuuysck2BnA9I9ebPbAjhQVSPHA2tJGkqCf3iZk5TZ2D\\nQymMXkaipdfi0Ccr33x86O2pKo3rCq5YkZj3nv0Ad5P0FSVzrcQMymswlMa78o03\\n6cAaigizHLyfCvEUV3ouSlPSWQsCgYEA4zMFDVKXOJqACiSd91HE/lg9SE8IVIFI\\nwrQ7ZM3JB2PO3RtQfOGSTW1F2EL24kPn+kUw1kvXxJTTmAopq6Th+oLTQYzZBAm8\\nAkhGuZsQze3szm1ZoDD/WPZn49WHtMxbbMIKMJyg/iPS3Der1xWh9HsPzU+YSDxo\\nktrg2Nyva2sCgYEAgf3pV8n1dyoKx/EcNfz7rIf5J885WdJO73dVxuHa8+fN7BFn\\nC5bkLro7UIql6iSrX4mdqWUVx/M/BbSK/8rErJn9JoijPsj2jCjQxX67NY84l7LW\\nzSPdHiC71xt7rypNHA9fOvJpqG/h9PWdEGsSKqAsRl7k47/YKAGiyGdMR/sCgYAu\\nttfMFHY5UjMPYtYD+xEZBsWa730T+v0d43bu1A0IcvIerjYPZ0Xwm44n2CTxAutY\\nnw9akH+N0Nfsw/Irc5xvKKUNLkuUs/evNHMuSH7dCJWPIBa0hD6MaSWVR9s+RmJp\\n6z+zHRFRD8aUNvIjKDSDkyX9neb+u0T5JP3kOQPsfwKBgGvKXA9wFBb8SX6NjURk\\n12fVYgZ9Ecvyq6Ypua+bqXvV5PniS7Wr/o6lLkDRvk2H0mfaQt3H47bYKHf/infO\\n5GiJ6kQ2ytUctWKR7DnmiS/NUoazSUmaeIpssmf+FMS6so0YzCGhZj/CAOZfwgQH\\n+FvMQTlsQqb2x5bCS87MACJj\\n-----END PRIVATE KEY-----\\n\",\n    \"expiredCertificate\": false\n}"
+							"raw": "{\n\"certificate\": \"-----BEGIN CERTIFICATE-----\\nMIID4zCCAssCAQEwDQYJKoZIhvcNAQELBQAwgc8xCzAJBgNVBAYTAlVTMSIwIAYD\\nVQQLDBlDbGFyaXMgSW50ZXJuYXRpb25hbCBJbmMuMTQwMgYDVQQLDCtDb3B5cmln\\naHQoYykgMjAyMSBDbGFyaXMgSW50ZXJuYXRpb25hbCBJbmMuMSIwIAYDVQQKDBlD\\nbGFyaXMgSW50ZXJuYXRpb25hbCBJbmMuMR4wHAYDVQQDDBVDbGFyaXMgUm9vdCBB\\ndXRob3JpdHkxIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5QGNsYXJpcy5jb20wHhcN\\nMjEwOTI2MDI1NTM3WhcNMjIwOTI2MDI1NTM3WjCBnjELMAkGA1UEBhMCVVMxEzAR\\nBgNVBAgMCkNhbGlmb3JuaWExFDASBgNVBAcMC1NhbnRhIENsYXJhMSIwIAYDVQQK\\nDBlDbGFyaXMgSW50ZXJuYXRpb25hbCBJbmMuMUAwPgYDVQQDDDdDbGFyaXMgU2Vs\\nZiBTaWduZWQgQ2VydGlmaWNhdGUgKE5vdCBmb3IgUHJvZHVjdGlvbiBVc2UpMIIB\\nIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArqyCHTzo7lwUw9k50RivXUmx\\nLUAh982UAfoPhCpeux7LKAm1rp/EWzEzxvrUBrUFX8oOeFY6PWrBy1KjBWkb4H5S\\nyItPb7vES9IcMcPNBY06W7UEjnvcLvL99OewvfEj7J7qUWhFjjUV7yn2/cLEC1LI\\ntwVWvPMhKGe3x5t+xroFYbnJx5S8KaVTz+VrZK4HrcK7Jx3MIs07PUcIMhH/jgSZ\\nJIaSk3yAaw7hN12ljKvhULhCtOGNyEoCNZ9GzklDGZyl7Lz8e01IUlBUhf6sXmes\\nabxoXK7XwMx8Y1Stfa4rAbFeKxVDV8goCbshLaUVn8xk4JQZAmqJtjV4l0rrEQID\\nAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAjYoZ4Ra6VKI8tb2f1ZBv2miCxba+COcS+\\nwWphPfbE/Z4Tyv8gPX39gRIwWd8wPVpvF9qAG8rYjDlDEv+4vZMF4/NF2Gg0l9Gg\\n6TXvBJ8YeZ6RmYIyBp8NVWAPwF7pGodjVUi5cuUbTcLeiW+sOPVYegkhg3zNykGw\\nqGl8tFFxA9al/0GzEvINVt0N5fJqnrSw9MKb2+rfBP6/hy0UfsupWv2V1Ju+rqlq\\ngBE6+PbqcORGn0dib3rFsQKMFd4cg5qQzd77bMXVAckArLQ6ABw9/XP/ESYARscI\\nRp5HnPIddE7Z/AJFjWqC03cfWu1mIDhlkwFkK1r04L0pQWXy2UCF\\n-----END CERTIFICATE-----\",\n\"privateKey\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCurIIdPOjuXBTD\\n2TnRGK9dSbEtQCH3zZQB+g+EKl67HssoCbWun8RbMTPG+tQGtQVfyg54Vjo9asHL\\nUqMFaRvgflLIi09vu8RL0hwxw80FjTpbtQSOe9wu8v3057C98SPsnupRaEWONRXv\\nKfb9wsQLUsi3BVa88yEoZ7fHm37GugVhucnHlLwppVPP5WtkrgetwrsnHcwizTs9\\nRwgyEf+OBJkkhpKTfIBrDuE3XaWMq+FQuEK04Y3ISgI1n0bOSUMZnKXsvPx7TUhS\\nUFSF/qxeZ6xpvGhcrtfAzHxjVK19risBsV4rFUNXyCgJuyEtpRWfzGTglBkCaom2\\nNXiXSusRAgMBAAECggEBAJsbrN7xu5YORpIzT1gSJ4cbbS3ViVRXRVsMBsNCLKTV\\nD2oaVS8fyGmCI4xKKAVcsc0BzB+n0ke/iR9X3lNrpsmO40waCQwbHJCHn2nBiUmo\\nw220LLup2TgHpuPW6eeBPnlcFI79nOZO1Y9vIFjuns+/T2TWZNOcwpDyqQujVMx5\\n44MhDdemoN/rIQPYWH7irk72jLkj0ssDbzjB5WF7Yvzn+pl3oYNAthQRcKn/rzUI\\n2L+2N0JcKBxp7/Soc5CADOjX87LfjY3yCucqwhFsU7kfoz+gJCA+LpmBMAyJUHAm\\nXfHhrVkyhMXKZ5BQbmqQ8h7yDkfwwTf0ARYG1PkiSQECgYEA24nNDcxCWy1+MVY6\\nS6Yhj6a//RO8FvCPMWkl+3k4eQ9A0c/BXfiDVryiWSQVqJbFUJjc1RH7yroxc/Ei\\nCSSePfzE409XWL98Cg8Cs1D2AQI2v1PJijNmw+eW06StskHOHwrgt2Q6LGKjZQut\\nkYr/jifLtPuxuI+4/ku5PGwL7bkCgYEAy68wLKTauceBqRZDqOOA2bYnltsyN57r\\n1shaR3WT8yo9UHu8KnCg05UEkqcea/f+iliZOFqd7OUoxwCV6LldeC9Hghi2CFJe\\nN2CuRwvC6jkkrYiEXisZ8lj9l6bW2uLzo57WkSgXHhmfhWC60GRXzk9AD7qoqGBM\\n9oMaIDEgVBkCgYA2S047K1j907Jx4TFppByIumSg4lCSG8xOHAMYvlIJHoyZVxgr\\ndVqGCQDdqt7wYtlJpYR37YqoCIRSeEBCopvAGNNYpDal7DVxB2VTk6JDfZismLwv\\nQacYrB3RGdkbTMr9QmNw94irkXl3c/vpEsdBEPaAO/8n9eN6gJ+/IbmRgQKBgQCF\\nWUp2z+8K1dzDcHoXZeqDnkfI8fSsiXTphv3j7sxP1IWT3Y5RUq9YFiWKRbMbCJ8y\\nv9KAHINsBpNtxapfVIwnFP0B5V+3jwVzx+4RQVf4tDSZD9lpNVqlWTGdSXM8lnzf\\n0Cu1mMOZxziyv6NOr4L05NmR8qhco79/XFGMZd0+cQKBgQCtbM5f/7GvThR4H7rc\\nX0T8ybbF/QGq5ZM8/9Gt28G6BWvuRPsPsq1zmHNT3ZYNFxvcuT6sWz94K8JqBmU2\\nW71PSp7GuwfHhYMEYdctzjteEAdq1XgMX2He6ov2z5cw+RBrN1ysr7+Zi6O3q/eC\\n8rkL6d57SfISJXVsUjsjhU7/7w==\\n-----END PRIVATE KEY-----\",\n\"expiredCertificate\": true\n}"
 						},
 						"url": {
 							"raw": "https://{{server}}/fmi/admin/api/{{version}}/server/certificate/import",
@@ -4076,6 +4516,74 @@
 					"response": []
 				},
 				{
+					"name": "Enable/Disable DAPI Install Plug-in Script",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"DAPIAllowInstallPlugins\": false\n}"
+						},
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/plugins/DAPIAllowInstallPluginScript",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"plugins",
+								"DAPIAllowInstallPluginScript"
+							]
+						},
+						"description": "Enable/Disable Database Server install plug-ins script"
+					},
+					"response": []
+				},
+				{
+					"name": "Enable/Disable DAPI Install Plug-in Script Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"DAPIEnablePlugins\": false\n}"
+						},
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/plugins/DAPIPlugins",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"plugins",
+								"DAPIPlugins"
+							]
+						},
+						"description": "Enable/Disable Database Server install plug-ins script"
+					},
+					"response": []
+				},
+				{
 					"name": "Get DBS Plug-in Configuration",
 					"request": {
 						"method": "GET",
@@ -4117,6 +4625,30 @@
 								"{{version}}",
 								"plugins",
 								"WpePluginConfig"
+							]
+						},
+						"description": "Get Web Publishing Engine plug-in configuration."
+					},
+					"response": []
+				},
+				{
+					"name": "Get DAPI Plug-in Configuration",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{server}}/fmi/admin/api/{{version}}/plugins/DAPIPluginConfig",
+							"protocol": "https",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"fmi",
+								"admin",
+								"api",
+								"{{version}}",
+								"plugins",
+								"DAPIPluginConfig"
 							]
 						},
 						"description": "Get Web Publishing Engine plug-in configuration."
