@@ -17,8 +17,8 @@ Recommended that you set up an environment with the following variables
 The following variables are declared with pre-request scripts
 | Variable | Description |
 | -------- | --------------------------------------- |
-| {{username}} | The administrator user name used to log into the server |
-| {{password}} | Password to log into the server |
+| {{fmsusername}} | The administrator user name used to log into the server |
+| {{fmspassword}} | Password to log into the server |
 | {{client_id}} | Identifies a logged in user |
 | {{machine_id}} | References a web worker on your server network |
 
