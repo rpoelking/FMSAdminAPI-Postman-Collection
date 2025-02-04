@@ -1,12 +1,12 @@
 # FMSAdminAPI Postman Collection
  API calls to manage your FileMaker Server installation
 
- **Requires FMS 19** 
+ **Requires FMS 21** 
  Some calls may require version later.
  These API calls cover up through version 19.4
 
  Author: Rob Poelking
- Last Updated: 2021-11-24
+ Last Updated: 2025-02-04
 
 Recommended that you set up an environment with the following variables
 | Variable | Description |
